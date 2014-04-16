@@ -1,12 +1,5 @@
 <%provide(:title, 'Help')%>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Ruby on Rails Tutorial Sample2 App | <%=yield(:title)%></title>
-</head>
-<body>
+
 <h1>Help</h1>
 <p>Find me in app/views/static_pages/help.html.erb</p>
-</body>
-</html>
 

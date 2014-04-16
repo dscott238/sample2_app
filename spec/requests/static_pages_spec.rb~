@@ -26,7 +26,7 @@ describe "Help page" do
 end
     it "should have the title 'Help'" do
    visit '/static_pages/help'
-   page.should have_selector('title', :text => "Help")
+   page.should have_selector('title', :text =>"Ruby on rails | Help")
   end
 end
 
@@ -39,7 +39,7 @@ end
 
   it "should have the title 'About Us'" do
   visit '/static_pages/about'
-  page.should have_selector('title', :text =>"About Us")
+  page.should have_selector('title', :text =>"Ruby on rails |About Us")
   end
 end
 
