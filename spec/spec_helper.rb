@@ -8,23 +8,25 @@ Spork.prefork do
   # if you change any configuration or code from libraries loaded here, you'll
   # need to restart spork for it take effect.
   ENV["RAILS_ENV"] ||= 'test'
-  require File.expand_path("../../config/environment", _FILE_)
+  require File.expand_path("../../config/environment", __FILE__)
   require 'rspec/rails'
   require 'rspec/autorun'
-  Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+ # Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
   
-  RSpec.configure do |config|
-  config.infer_base_class_for_anonymous_controllers = false
-  config.order = "random"
-  config.include Capybara::DSL
+ # RSpec.configure do |config|
+ # configure.fixture_path = "#{::Rails.root}/spec/fixtures"
+ # config.use_transactional_fixtures = true
+ # config.infer_base_class_for_anonymous_controllers = false
+ # config.order = "random"
+ # config.include Capybara::DSL
 
-end
-end
+ #end
+  #end
 
-Spork.each_run do
+#Spork.each_run do
   # This code will be run each time you run your specs.
 
-end
+#end
 
 # --- Instructions ---
 # Sort the contents of this file into a Spork.prefork and a Spork.each_run
@@ -59,10 +61,10 @@ end
 
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
-ENV["RAILS_ENV"] ||= 'test'
-require File.expand_path("../../config/environment", __FILE__)
-require 'rspec/rails'
-require 'rspec/autorun'
+#ENV["RAILS_ENV"] ||= 'test'
+#require File.expand_path("../../config/environment", __FILE__)
+#require 'rspec/rails'
+#require 'rspec/autorun'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -100,4 +102,8 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
   config.include Capybara::DSL
+end
+end
+
+Spork.each_run do
 end

@@ -8,24 +8,24 @@ describe "Static Pages" do
   describe "Home Page" do
 
     it "should have the content 'Home'" do
-     visit '/static_pages/home'
+     visit root_path
      expect(page).to have_content('Home')
     end
 
      it "should have the title 'Home'"do
-     visit '/static_pages/home'
-     page.should have_selector('title', :text =>"Ruby on rails | Home")
+     visit root_path
+     page.should have_selector('title', :text =>"Home")
     end
    end
 
 describe "Help page" do
 
   it "should have the content 'Help'" do
-   visit '/static_pages/help'
+   visit help_path
    expect(page).to have_content('Help')
 end
     it "should have the title 'Help'" do
-   visit '/static_pages/help'
+   visit help_path
    page.should have_selector('title', :text => "Help")
   end
 end
@@ -33,24 +33,24 @@ end
 describe "About page" do
 
   it "should have the content 'About Us'" do
-  visit '/static_pages/about'
+  visit about_path
   expect(page).to have_content('About Us')
 end
 
   it "should have the title 'About Us'" do
-  visit '/static_pages/about'
+  visit about_path
   page.should have_selector('title', :text =>"About Us")
   end
 end
 
 describe "Contacts page" do
-  it "should have the content 'Contacts'" do
-  visit '/static_pages/contacts'
-  expect(page).to have_content('Contacts')
+  it "should have the content 'Contact'" do
+  visit contact_path
+  expect(page).to have_content('Contact')
 end
-  it "should have the title 'Contacts'" do
-  visit '/static_pages/contacts'
-  page.should have_selector('title', :text => "Contacts")
+  it "should have the title 'Contact'" do
+  visit contact_path
+  page.should have_selector('title', :text => "Contact")
  end
 end
 end
