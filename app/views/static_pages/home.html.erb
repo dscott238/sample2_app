@@ -1,6 +1,19 @@
 <% provide(:title, 'Home') %>
+<style>
+h1
+{
+text-shadow: -1px -1px 2px, 1px 1px 1px #FFD700;
+color: #FFD700;
+font: 'BlackJackRegular';
+opacity: 0.3;
+}
+</style>
 <div class="center hero-unit">
-  <h1>Welcome to the Sample App</h1>
+ 
+
+<h1>
+Welcome to the Sample App <small> I'm the secondary heading</small>
+</h1>
   <h2>
    This is the home page for the
    <a href="http://railstutorial.org/">Ruby on rails Tutorial</a>
@@ -8,6 +21,7 @@
   </h2>
 
   <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+</font>
 </div>
 
 <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
